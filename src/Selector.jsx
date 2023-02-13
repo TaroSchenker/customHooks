@@ -27,6 +27,7 @@ const Selector = () => {
           label="DATA!"
           onChange={(e) => setSelectedValue(e)}
         >
+        
           {data &&
             data.map((item, index) => (
               <MenuItem key={index} value={item}>
