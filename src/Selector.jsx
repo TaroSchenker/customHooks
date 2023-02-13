@@ -6,15 +6,15 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useSelector } from "./useSelector";
 
-const Selector = () => {
-// WE DO NOT NEED THIS IN THE SELECTED, IT CAN BE HANDLED IN USESELECTOR INSTEAD
+const Selector = (label) => {
+  // WE DO NOT NEED THIS IN THE SELECTED, IT CAN BE HANDLED IN USESELECTOR INSTEAD
   // const [age, setAge] = React.useState('');
 
   // const handleChange = (event) => {
   //   setAge(event.target.value);
   // };
 
-  const { selected, data, setSelectedValue } = useSelector();
+  const { selected, data, setSelectedValue } = useSelector(label.label);
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -24,10 +24,9 @@ const Selector = () => {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={selected}
-          label="DATA!"
+          label={label.label}
           onChange={(e) => setSelectedValue(e)}
         >
-        
           {data &&
             data.map((item, index) => (
               <MenuItem key={index} value={item}>

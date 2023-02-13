@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import ExampleComponent from './Example'
 import ExampleComponentWithHook from './ExampleWithHook'
-import SchemeSelector from './Selector'
+import SchemeSelector from './SchemeSelector'
 import Selector from './Selector'
 
 function App() {
@@ -12,10 +12,10 @@ function App() {
   return (
     <div>
     <SchemeSelector />
-    <p> Without hook</p>
+    {/* <p> Without hook</p>
       <ExampleComponent />
       <p> With hook</p>
-      <ExampleComponentWithHook  />
+      <ExampleComponentWithHook  /> */}
     </div>
     
   )
